@@ -19,13 +19,11 @@ class EnsureEmailIsVerified
         // 1. 如果用户已经登录
         // 2. 并且还未认证 Email
         // 3. 并且访问的不是 email 验证相关 URL 或者退出的 URL。
-        if ($request->user() &&
-            ! $request->user()->hasVerifiedEmail() &&
-            ! $request->is('email/*', 'logout')) {
+        if ($request->user() && ! $request->user()->hasVerifiedEmail() && ! $request->is('email/*', 'logout')) {
 
             // 根据客户端返回对应的内容
             return $request->expectsJson()
-                        ? abort(403, 'Your email address is not verified.')
+                        ? abort(403, '你的Emaill地址尚未验证，请先进行验证')
                         : redirect()->route('verification.notice');
         }
 
