@@ -7,7 +7,7 @@
 
     <!-- title -->
     <title>@yield('title', 'laraBBS') -- Laravel进阶项目</title>
-
+    <meta name="description" content="@yield('description', 'LaraBBS爱好者社区')">
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     @yield('styles')
