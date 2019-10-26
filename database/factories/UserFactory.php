@@ -17,6 +17,7 @@ use Illuminate\Support\Str;
 */
 
 $factory->define(User::class, function (Faker $faker) {
+    $date_time = $faker->dateTimeThisMonth();
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
