@@ -16990,6 +16990,17 @@ readers do not read off random characters that represent icons */
   line-height: 38px;
 }
 
+/* 回复列表 */
+
+.topic-reply a {
+  color: inherit;
+}
+
+.topic-reply .meta {
+  font-size: 0.9em;
+  color: #b3b3b3;
+}
+
 body {
   font-family: Helvetica, "Microsoft YaHei", Arial, sans-serif;
   font-size: 14px;
