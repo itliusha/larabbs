@@ -48,5 +48,10 @@ class UsersTableSeeder extends Seeder
         $user->email = 'summer@example.com';
         $user->avatar = 'https://cdn.learnku.com/uploads/images/201710/14/1/ZqM7iaP4CR.png';
         $user->save();
+
+        $user->assignRole('Founder');
+        $user2 = User::find(2);
+        $user2->assignRole('Maintainer');
+
     }
 }
